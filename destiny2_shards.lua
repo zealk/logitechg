@@ -26,7 +26,7 @@ function auto()
   OutputLogMessage('End script\n')
 end
 
---23715 Glimmer per cycle
+--9486 Glimmers per cycle
 function buyAndDismantleCycle()
   --Assuming in character page
   if (not IsKeyLockOn(keyRequired)) then do OutputLogMessage('End script\n') return end end
@@ -38,13 +38,13 @@ function buyAndDismantleCycle()
   Sleep(200)
   PressAndReleaseMouseButton(1)
   Sleep(1500)
-  MoveMouseTo(12190, 50779) --Move to Level
+  MoveMouseTo(12190, 38500) --Move to Activity
   Sleep(200)
   PressAndReleaseMouseButton(1)
   Sleep(2000)
   PressAndReleaseKey('right')
   Sleep(1000)
-  for i = 0, 4 do
+  for i = 0, 0 do
     if (not IsKeyLockOn(keyRequired)) then do OutputLogMessage('End script\n') return end end
     moveToItemInCollection(i)
     Sleep(500)
@@ -60,7 +60,7 @@ function buyAndDismantleCycle()
   PressAndReleaseKey('F1')
   Sleep(2000)
   
-  for i = 0, 4 do
+  for i = 4, 4 do
     if (not IsKeyLockOn(keyRequired)) then do OutputLogMessage('End script\n') return end end
     moveToItemInRightColumn(i)
     Sleep(1000)
@@ -73,26 +73,17 @@ function buyAndDismantleCycle()
   end
 end
 
--- Buy 50000 Glimmer
+-- Buy 10000 Glimmer
 function buyGlimmer()
   -- Assume in character page
   if (not IsKeyLockOn(keyRequired)) then do OutputLogMessage('End script\n') return end end
   PressAndReleaseKey('F1')
   Sleep(5000)
-  
-  -- Need to be changed each day
-  moveToItemOfVendor(5)
-  Sleep(300)
-  for i = 1, 20 do
-    if (not IsKeyLockOn(keyRequired)) then do OutputLogMessage('End script\n') return end end
-    PressAndReleaseMouseButton(1)
-    Sleep(1000)
-  end
 
   -- Need to be changed each day
-  moveToItemOfVendor(1)
+  moveToItemOfVendor(0)
   Sleep(300)
-  for i = 1, 5 do
+  for i = 1, 1 do
     if (not IsKeyLockOn(keyRequired)) then do OutputLogMessage('End script\n') return end end
     PressAndReleaseMouseButton(1)
     Sleep(1000)
@@ -130,7 +121,7 @@ function openCollection()
 end
 
 function moveToItemInCollection(i)
-  MoveMouseTo(24790 + i * distance , 53239)
+  MoveMouseTo(24790 + i * distance , 29500)
 end
 
 function moveToItemOfVendor(i)
